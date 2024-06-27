@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HistoryService } from './history.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyDashboard';
+
+  constructor(public historyService: HistoryService) {}
+
+  ngOnInit() {}
+
+  // Example method to toggle warnRefreshCache
+  toggleWarnRefreshCache() {
+    this.historyService.warnRefreshCache = !this.historyService.warnRefreshCache;
+  }
 }
