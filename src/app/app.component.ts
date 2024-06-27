@@ -9,12 +9,16 @@ import { HistoryService } from './history.service';
 export class AppComponent {
   title = 'MyDashboard';
 
-  constructor(public historyService: HistoryService) {}
+  constructor() {}
 
   ngOnInit() {}
 
   // Example method to toggle warnRefreshCache
   toggleWarnRefreshCache() {
-    this.historyService.warnRefreshCache = !this.historyService.warnRefreshCache;
+    HistoryService.warnRefreshCache = !HistoryService.warnRefreshCache;
+  }
+
+  get warnRefreshCache() {
+    return HistoryService.warnRefreshCache;
   }
 }

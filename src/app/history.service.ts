@@ -5,13 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class HistoryService {
 
-  warnRefreshCache: boolean = false;
+  public static warnRefreshCache = false;
 
-  setWarnRefreshCache(value: boolean) {
-    this.warnRefreshCache = value;
-  }
-
-  getWarnRefreshCache() {
-    return this.warnRefreshCache;
-  }
 }
