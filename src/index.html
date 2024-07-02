@@ -7,12 +7,18 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+  <style>
+    body::before{
+      content: '';
+      display: block;
+      height: 55px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="navbar navbar-expand-md bg-dark navbar-dark text-white">
+  <div class="navbar navbar-expand-md bg-dark navbar-dark text-white fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">Bootsrap Tutorial</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu">
@@ -23,7 +29,13 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a href="#hero" class="nav-link">Get Strated</a></li>
           <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#learn" class="nav-link">Learn Bootstrap</a></li>
+          <li class="nav-item dropdown">
+            <a href="#learn" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learn</a>
+            <ul class="dropdown-menu">
+              <li><a href="#learn-bootstrap" class="dropdown-item">Learn Bootstrap</a></li>
+              <li><a href="#where-togo" class="dropdown-item">Where to go next</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="#faq" class="nav-link">Ask Me</a></li>
         </ul>
       </div>
@@ -46,7 +58,7 @@
   </section>
 
   <!-- Services -->
-  <section class="py-5" style="background-color: #87CEEB;">
+  <section id="features" class="py-5" style="background-color: #87CEEB;">
     <div class="container">
       <h2 class="text-center mb-4">
         Features
@@ -95,7 +107,7 @@
   </section>
 
   <!--what to learn-->
-  <section id="learn" class="py-5" style="background-color: lime;">
+  <section id="learn-bootstrap" class="py-5" style="background-color: lime;">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="row col-md">
@@ -111,7 +123,7 @@
   </section>
 
     <!--Next-->
-    <section id="learn" class="py-5 bg-dark text-light">
+    <section id="where-togo" class="py-5 bg-dark text-light">
       <div class="container">
         <div class="row align-items-center justify-content-center flex-row-reverse">
           <div class="row col-md">
@@ -167,6 +179,9 @@
 
       </div>
     </section>
+
+    <app-root></app-root>
+  
   <!--Footer-->
   <footer class="py-4 bg-dark text-white text-center position-relative">
     <div class="container">
@@ -180,7 +195,7 @@
       </a>
     </div>
   </footer>
-  <app-root></app-root>
+
 </body>
 
 </html>
